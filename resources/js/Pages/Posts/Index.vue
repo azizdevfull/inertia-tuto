@@ -1,6 +1,9 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import { Link, router } from "@inertiajs/vue3";
+import { Link, router, usePage } from "@inertiajs/vue3";
+
+const page = usePage();
+const user = page.props.auth.user;
 
 const props = defineProps({
     posts: Object,
@@ -44,6 +47,7 @@ onMounted(() => {
 </script>
 
 <template>
+    <h1>{{ user.name }}</h1>
     <div class="max-w-2xl mx-auto p-6">
         <h1 class="text-3xl font-bold mb-6 text-gray-800">
             📌 Posts <Link href="/posts/create">Create</Link>
