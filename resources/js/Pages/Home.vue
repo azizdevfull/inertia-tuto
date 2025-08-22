@@ -7,6 +7,7 @@
         <Link href="/about" class="text-indigo-600 underline">
             About sahifasiga o‘tish →
         </Link>
+        <Link href="/posts">Posts</Link>
     </div>
 </template>
 
